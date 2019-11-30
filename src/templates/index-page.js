@@ -75,7 +75,7 @@ export const IndexPageTemplate = ({
       <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
         To order, please email:
       </h2>
-      <p css={{ marginBottom: 0, textAlign: 'center', paddingBottom: '30px' }}>
+      <p css={{ marginBottom: 0, textAlign: 'center', paddingBottom: '50px' }}>
         <a css={{ color: colors.lightPurple, textDecoration: 'none' }} href={`mailto:${social.email}`} target="_blank">
           {social.email}
         </a>
@@ -130,7 +130,7 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -141,7 +141,7 @@ export const pageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 500, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }

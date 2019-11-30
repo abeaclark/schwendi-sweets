@@ -23,12 +23,12 @@ class CookieRoll extends React.Component {
             <button css={{background: 'transparent', color: 'white', border: 0, fontSize: '50px', cursor: 'pointer'}} onClick={nextSlide}>{">"}</button>
           )}
         >
-          {this.props.cookieTypes.map(c => (
-            <div>
-            <Img
-              fluid={c.image.childImageSharp.fluid}
-              loading='eager'
-            />
+          {this.props.cookieTypes.map((c, i) => (
+            <div key={i}>
+              <Img
+                fluid={c.image.childImageSharp.fluid}
+                loading='eager'
+              />
             </div>
           ))}
 
