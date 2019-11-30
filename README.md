@@ -1,0 +1,1 @@
+# Basic site for high-school entrepreneurship project.
