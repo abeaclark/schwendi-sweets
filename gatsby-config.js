@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Schwendi Sweets',
     description:
-      'Marketing & Sales site for Schwendi Sweets',
+      `We’re just a couple of  best friends hoping to earn a little money while providing people what they love; cookies!`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

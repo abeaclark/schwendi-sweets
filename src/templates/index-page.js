@@ -27,7 +27,8 @@ export const IndexPageTemplate = ({
   subheading,
   description,
   cookieTypes,
-  social
+  social,
+  priceText,
 }) => (
   <div css={styles.outer}>
     <div css={styles.hero}>
@@ -55,6 +56,20 @@ export const IndexPageTemplate = ({
     <CookieRoll
       cookieTypes={cookieTypes}
     />
+    <div css={{ textAlign: 'center'}}>
+      <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
+        Pricing
+      </h2>
+      <p>
+        3 cookies for 2 dollars
+      </p>
+      <p>
+        5 cookies for 3 dollars
+      </p>
+      <p css={{ marginBottom: 0, paddingBottom: '30px' }}>
+        12 for 7 dollars
+      </p>
+    </div>
   </div>
 )
 
@@ -114,7 +129,7 @@ export const pageQuery = graphql`
         cookieTypes {
           image {
             childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
+              fluid(maxWidth: 500, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }

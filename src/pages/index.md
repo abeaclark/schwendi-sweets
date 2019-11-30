@@ -15,10 +15,6 @@ cookieTypes:
     title: Chocolate Chip
   - image: /img/IMG_3063.jpeg
     title: Chocolate Chip
-priceText: >-
-    3 cookies for 2 dollars
-    5 cookies for 3 dollars
-    12 for 7 dollars
 social:
   instagramLink: "https://www.instagram.com/schwendi.sweets"
   instagramHandle: "@schwendi.sweets"
