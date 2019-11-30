@@ -25,7 +25,10 @@ class CookieRoll extends React.Component {
         >
           {this.props.cookieTypes.map(c => (
             <div>
-            <Img fluid={c.image.childImageSharp.fluid} />
+            <Img
+              fluid={c.image.childImageSharp.fluid}
+              loading='eager'
+            />
             </div>
           ))}
 

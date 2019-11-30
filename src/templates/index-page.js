@@ -9,7 +9,7 @@ import Layout from '../components/Layout'
 
 const styles = {
   outer: {
-    backgroundColor: colors.lightPurple,
+    backgroundColor: colors.darkPurple,
   },
   main: {
     ...themeStyles.contentWidth,
@@ -40,17 +40,18 @@ export const IndexPageTemplate = ({
           maxWidth: '500px',
           margin: '0 auto',
         }}
+        loading='eager'
       />
     </div>
     <div css={styles.main}>
 
       <h1 css={{ textAlign: 'center' }}>{heading}</h1>
       <p css={{ textAlign: 'center' }}>
-        <a css={{ color: colors.darkPurple, textDecoration: 'none' }} href={social.instagramLink} target="_blank">
+        <a css={{ color: colors.lightPurple, textDecoration: 'none' }} href={social.instagramLink} target="_blank">
           {social.instagramHandle}
         </a>
       </p>
-      <p css={{ textAlign: 'center' }}>{description}</p>
+      <p css={{ textAlign: 'center', color: 'white' }}>{description}</p>
 
     </div>
     <CookieRoll
@@ -60,14 +61,24 @@ export const IndexPageTemplate = ({
       <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
         Pricing
       </h2>
-      <p>
+      <p css={{ color: colors.lightPurple }}>
         3 cookies for 2 dollars
       </p>
-      <p>
+      <p css={{ color: colors.lightPurple }}>
         5 cookies for 3 dollars
       </p>
-      <p css={{ marginBottom: 0, paddingBottom: '30px' }}>
+      <p css={{ marginBottom: 0, paddingBottom: '30px', color: colors.lightPurple }}>
         12 for 7 dollars
+      </p>
+    </div>
+    <div css={{ textAlign: 'center'}}>
+      <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
+        To order, please email:
+      </h2>
+      <p css={{ marginBottom: 0, textAlign: 'center', paddingBottom: '30px' }}>
+        <a css={{ color: colors.lightPurple, textDecoration: 'none' }} href={`mailto:${social.email}`} target="_blank">
+          {social.email}
+        </a>
       </p>
     </div>
   </div>
@@ -139,6 +150,7 @@ export const pageQuery = graphql`
         social {
           instagramLink
           instagramHandle
+          email
         }
       }
     }

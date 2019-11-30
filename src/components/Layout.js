@@ -10,7 +10,7 @@ const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div
-      css={{backgroundColor: colors.lightPurple}}
+      css={{backgroundColor: colors.darkPurple}}
     >
       <Helmet>
         <html lang="en" />
