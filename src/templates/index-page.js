@@ -30,6 +30,7 @@ export const IndexPageTemplate = ({
   social,
   priceText,
   disclaimer,
+  disclaimer2,
 }) => (
   <div css={styles.outer}>
     <div css={styles.hero}>
@@ -86,9 +87,13 @@ export const IndexPageTemplate = ({
       <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
         Info
       </h2>
-      <p css={{ marginBottom: 0, textAlign: 'center', paddingBottom: '50px', color: colors.lightPurple }}>
+      <p css={{ marginBottom: 0, textAlign: 'center', color: colors.lightPurple }}>
         {disclaimer}
       </p>
+      <p css={{ marginBottom: 0, textAlign: 'center', paddingBottom: '50px', color: colors.lightPurple }}>
+        {disclaimer2}
+      </p>
+
     </div>
   </div>
 )
@@ -102,6 +107,7 @@ IndexPageTemplate.propTypes = {
   cookieTypes: PropTypes.array,
   social: PropTypes.object,
   disclaimer: PropTypes.string,
+  disclaimer2: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
@@ -118,6 +124,7 @@ const IndexPage = ({ data }) => {
         cookieTypes={frontmatter.cookieTypes}
         social={frontmatter.social}
         disclaimer={frontmatter.disclaimer}
+        disclaimer2={frontmatter.disclaimer2}
       />
     </Layout>
   )
@@ -148,6 +155,7 @@ export const pageQuery = graphql`
         heading
         subheading
         disclaimer
+        disclaimer2
         description
         cookieTypes {
           image {
