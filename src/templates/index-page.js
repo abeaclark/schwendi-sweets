@@ -59,41 +59,43 @@ export const IndexPageTemplate = ({
     <CookieRoll
       cookieTypes={cookieTypes}
     />
-    <div css={{ textAlign: 'center'}}>
-      <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
-        Pricing
-      </h2>
-      <p css={{ color: colors.lightPurple }}>
-        3 cookies for 2 dollars
-      </p>
-      <p css={{ color: colors.lightPurple }}>
-        5 cookies for 3 dollars
-      </p>
-      <p css={{ marginBottom: 0, paddingBottom: '30px', color: colors.lightPurple }}>
-        12 for 7 dollars
-      </p>
-    </div>
-    <div css={{ textAlign: 'center'}}>
-      <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
-        To order, please email:
-      </h2>
-      <p css={{ marginBottom: 0, textAlign: 'center'}}>
-        <a css={{ color: colors.lightPurple, textDecoration: 'none' }} href={`mailto:${social.email}`} target="_blank">
-          {social.email}
-        </a>
-      </p>
-    </div>
-    <div css={{ textAlign: 'center'}}>
-      <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
-        Info
-      </h2>
-      <p css={{ marginBottom: 0, textAlign: 'center', color: colors.lightPurple }}>
-        {disclaimer}
-      </p>
-      <p css={{ marginBottom: 0, textAlign: 'center', paddingBottom: '50px', color: colors.lightPurple }}>
-        {disclaimer2}
-      </p>
+    <div css={styles.main}>
+      <div css={{ textAlign: 'center'}}>
+        <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
+          Pricing
+        </h2>
+        <p css={{ color: colors.lightPurple }}>
+          3 cookies for 2 dollars
+        </p>
+        <p css={{ color: colors.lightPurple }}>
+          5 cookies for 3 dollars
+        </p>
+        <p css={{ marginBottom: 0, paddingBottom: '30px', color: colors.lightPurple }}>
+          12 for 7 dollars
+        </p>
+      </div>
+      <div css={{ textAlign: 'center'}}>
+        <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
+          To order, please email:
+        </h2>
+        <p css={{ marginBottom: 0, textAlign: 'center'}}>
+          <a css={{ color: colors.lightPurple, textDecoration: 'none' }} href={`mailto:${social.email}`} target="_blank">
+            {social.email}
+          </a>
+        </p>
+      </div>
+      <div css={{ textAlign: 'center'}}>
+        <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
+          Info
+        </h2>
+        <p css={{ marginBottom: 0, textAlign: 'center', color: colors.lightPurple }}>
+          {disclaimer}
+        </p>
+        <p css={{ marginBottom: 0, textAlign: 'center', paddingBottom: '50px', color: colors.lightPurple }}>
+          {disclaimer2}
+        </p>
 
+      </div>
     </div>
   </div>
 )
