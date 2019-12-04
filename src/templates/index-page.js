@@ -65,13 +65,13 @@ export const IndexPageTemplate = ({
           Pricing
         </h2>
         <p css={{ color: colors.lightPurple }}>
-          3 cookies for 2 dollars
+          3 cookies for 2 dollars <a href='https://checkout.square.site/pay/3e3d4c783b674ca3b4a6bee2cbe0cd59'>Buy</a>
         </p>
         <p css={{ color: colors.lightPurple }}>
-          5 cookies for 3 dollars
+          5 cookies for 3 dollars <a href='https://checkout.square.site/pay/8f51a723a55b4052b8557ab43f86f795'>Buy</a>
         </p>
         <p css={{ marginBottom: 0, paddingBottom: '30px', color: colors.lightPurple }}>
-          12 for 7 dollars
+          12 for 7 dollars <a href='https://checkout.square.site/pay/8b83793c73c74587ae05f480908b92df'>Buy</a>
         </p>
       </div>
       <div css={{ textAlign: 'center'}}>
