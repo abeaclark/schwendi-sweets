@@ -1,3 +1,5 @@
+var proxy = require("http-proxy-middleware")
+
 module.exports = {
   siteMetadata: {
     title: 'Schwendi Sweets',
@@ -7,6 +9,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-glamor`,
+    
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -73,4 +76,15 @@ module.exports = {
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions": "",
+        },
+      })
+    )
+  },
 }

@@ -16,7 +16,7 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
+        <script type="text/javascript" src="https://js.squareupsandbox.com/v2/paymentform"></script>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
