@@ -61,17 +61,23 @@ export const IndexPageTemplate = ({
     />
     <div css={styles.main}>
       <div css={{ textAlign: 'center'}}>
+        <Link 
+          to="/payment"
+          css={{ backgroundColor: 'white', color: colors.darkPurple, display: 'block', padding: '10px 30px', fontSize: '30px', maxWidth: '300px', borderRadius: '10px', textDecoration: 'none', ...themeStyles.shadow, margin: '0 auto', marginTop: '20px', marginBottom: '40px'}}
+        >
+          Buy Cookies 🍪
+        </Link>
         <h2 css={{ marginTop: '30px', color: 'white', textAlign: 'center' }}>
           Pricing
         </h2>
         <p css={{ color: colors.lightPurple }}>
-          3 cookies for 2 dollars <a href='https://checkout.square.site/pay/3e3d4c783b674ca3b4a6bee2cbe0cd59'>Buy</a>
+          3 cookies for 2 dollars
         </p>
         <p css={{ color: colors.lightPurple }}>
-          5 cookies for 3 dollars <a href='https://checkout.square.site/pay/8f51a723a55b4052b8557ab43f86f795'>Buy</a>
+          5 cookies for 3 dollars
         </p>
         <p css={{ marginBottom: 0, paddingBottom: '30px', color: colors.lightPurple }}>
-          12 for 7 dollars <a href='https://checkout.square.site/pay/8b83793c73c74587ae05f480908b92df'>Buy</a>
+          12 for 7 dollars
         </p>
       </div>
       <div css={{ textAlign: 'center'}}>

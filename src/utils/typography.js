@@ -19,6 +19,9 @@ const theme = {
   bodyWeight: 'normal',
   boldWeight: 'bold',
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
+    body: {
+      backgroundColor: darkPurple,
+    },
     h1: {
       color: 'white',
       marginBottom: '30px',

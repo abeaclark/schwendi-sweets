@@ -102,11 +102,36 @@ class PaymentPage extends React.Component {
       return
     }
 
+    const {
+      cookieType,
+      quantity,
+      delivery,
+      firstName,
+      lastName,
+      email,
+      phone,
+      streetAddress,
+      city,
+      state,
+      postal,
+    } = this.state
+
     fetch("/.netlify/functions/process-payment", {
       method: "POST",
       body: JSON.stringify({
         nonce,
-        total: this.getTotal() * 100
+        total: this.getTotal() * 100,
+        cookieType,
+        quantity,
+        delivery,
+        firstName,
+        lastName,
+        email,
+        phone,
+        streetAddress,
+        city,
+        state,
+        postal,
       }),
     })
     .then(response => {

@@ -5,6 +5,7 @@
   "author": "Abe Clark",
   "dependencies": {
     "@babel/preset-react": "^7.7.4",
+    "@sendgrid/mail": "^6.4.0",
     "bulma": "^0.8.0",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.2.34",
@@ -40,6 +41,7 @@
     "react-helmet": "^5.2.0",
     "react-square-payment-form": "^0.4.1",
     "react-typography": "^0.16.19",
+    "request-promise": "^4.2.5",
     "square-connect": "^2.20191217.0",
     "typography": "^0.16.19",
     "uuid": "^3.2.1"
