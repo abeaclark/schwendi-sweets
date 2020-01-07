@@ -48,7 +48,7 @@ module.exports.handler = async function(event, context) {
     const baseURL = 'https://api.sendgrid.com/v3/mail/send'
 
     const orderEmailContents = {
-      to: "abeaclark@gmail.com",
+      to: "schwendisweets@gmail.com",
       from: "schwendisweets@gmail.com",
       subject: "New Order!",
       templateId: "eab4f5fd-cd99-400e-a48b-36670734c83c",
