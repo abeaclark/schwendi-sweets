@@ -314,7 +314,7 @@ class PaymentPage extends React.Component {
             />
           </fieldset>
           <SquarePaymentForm
-            sandbox={true}
+            sandbox={!process.env.GATSBY_SQUARE_APPLICATION_ID}
             applicationId={process.env.GATSBY_SQUARE_APPLICATION_ID || "sandbox-sq0idb-JMxtvZJr1Ed0-Q1HbZFpHA"}
             locationId={process.env.GATSBY_SQUARE_LOCATION_ID || "7VHBP9JJ9TA4D"}
             cardNonceResponseReceived={this.cardNonceResponseReceived}
