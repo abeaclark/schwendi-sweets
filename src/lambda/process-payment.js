@@ -1,10 +1,10 @@
 // For more info, check https://www.netlify.com/docs/functions/#javascript-lambda-functions
+const SquareConnect = require('square-connect');
+const crypto = require('crypto');
+var rp = require('request-promise');
+const sendGridMail = require('@sendgrid/mail');
 
 module.exports.handler = async function(event, context) {
-  const SquareConnect = require('square-connect');
-  const crypto = require('crypto');
-  var rp = require('request-promise');
-  const sendGridMail = require('@sendgrid/mail');
   const defaultClient = SquareConnect.ApiClient.instance;
   // Configure OAuth2 access token for authorization: oauth2
   var oauth2 = defaultClient.authentications['oauth2'];
