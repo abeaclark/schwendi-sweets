@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   plugins: [
     new webpack.DefinePlugin({ "global.GENTLY": false })
   ],
