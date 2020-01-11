@@ -49,7 +49,7 @@ exports.handler = async (event, context) => {
 
     const orderEmailContents = {
       to: "schwendisweets@gmail.com",
-      from: "schwendisweets@gmail.com",
+      from: "abeaclark@gmail.com",
       subject: "New Order!",
       templateId: "eab4f5fd-cd99-400e-a48b-36670734c83c",
       substitutions: {
