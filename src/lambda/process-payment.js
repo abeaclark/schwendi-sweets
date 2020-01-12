@@ -44,12 +44,11 @@ exports.handler = async (event, context) => {
   };
 
   try {
-    const response = await payments_api.createPayment(request_body);
-    const baseURL = 'https://api.sendgrid.com/v3/mail/send'
+    // const response = await payments_api.createPayment(request_body); 
 
     const orderEmailContents = {
       to: "schwendisweets@gmail.com",
-      from: "abeaclark@gmail.com",
+      from: "schwendisweets@gmail.com",
       subject: "New Order!",
       templateId: "eab4f5fd-cd99-400e-a48b-36670734c83c",
       substitutions: {
@@ -71,7 +70,8 @@ exports.handler = async (event, context) => {
     sendGridMail.setApiKey(process.env.SENDGRID_API_KEY)
     sendGridMail.setSubstitutionWrappers('{{', '}}')
   
-    sendGridMail.send(orderEmailContents)
+    console.log(process.env.SENDGRID_API_KEY)
+    await sendGridMail.send(orderEmailContents)
       .then((res) => console.log('Sent order email'))
       .catch((err) => console.log('Error sending order email ' + err))
 
