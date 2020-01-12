@@ -44,7 +44,7 @@ exports.handler = async (event, context) => {
   };
 
   try {
-    // const response = await payments_api.createPayment(request_body); 
+    const response = await payments_api.createPayment(request_body); 
 
     const orderEmailContents = {
       to: "schwendisweets@gmail.com",
@@ -70,7 +70,6 @@ exports.handler = async (event, context) => {
     sendGridMail.setApiKey(process.env.SENDGRID_API_KEY)
     sendGridMail.setSubstitutionWrappers('{{', '}}')
   
-    console.log(process.env.SENDGRID_API_KEY)
     await sendGridMail.send(orderEmailContents)
       .then((res) => console.log('Sent order email'))
       .catch((err) => console.log('Error sending order email ' + err))
